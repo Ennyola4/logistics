@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import "flag-icons/css/flag-icons.min.css";
+
+@theme {
+	--color-primary: #c4161c;
+	--color-secondary: #2a2a2a;
+	--color-light: #fbeaea;
+	--color-dark: #202020;
+	--font-sans: "Manrope", sans-serif;
+	--font-heading: "Barlow Condensed", sans-serif;
+}
+
+:root {
+	font-family: var(--font-sans);
+	color: #1f1f1f;
+	background: #ffffff;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	font-family: var(--font-sans);
+}
+
+h1 {
+	font-family: var(--font-heading);
+}
+
+a {
+	text-decoration: none;
+}
+
+.flag-marquee-track {
+	display: flex;
+	width: max-content;
+	animation: flag-marquee 180s linear infinite;
+	will-change: transform;
+}
+
+.flag-marquee-group {
+	display: flex;
+	flex: none;
+	align-items: center;
+	gap: 0.85rem;
+	padding-right: 0.85rem;
+}
+
+.flag-marquee-headline {
+	white-space: nowrap;
+	font-size: 0.65rem;
+	font-weight: 800;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+}
+
+.flag-marquee-divider {
+	width: 0.3rem;
+	height: 0.3rem;
+	flex: none;
+	border-radius: 9999px;
+	background: var(--color-primary);
+}
+
+.flag-marquee-flag {
+	width: 1.25rem;
+	height: 0.875rem;
+	flex: none;
+	border-radius: 2px;
+	box-shadow: 0 0 0 1px rgb(255 255 255 / 12%);
+}
+
+@keyframes flag-marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.flag-marquee-track {
+		animation: none;
+	}
+}
