@@ -1,6 +1,5 @@
 
 import { useEffect, useState, type FC } from "react"
-import { BsFillChatQuoteFill } from "react-icons/bs"
 import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi"
 
 interface NavLink {
