@@ -77,8 +77,8 @@ const Home = () => {
               From first mile to final destination, we make shipping simpler, supply chains smarter, and opportunity easier to reach.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <a href="/get-a-quote" className="inline-flex min-h-14 items-center gap-5  bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:brightness-110">
-                Plan a shipment <FiArrowUpRight size={18} aria-hidden="true" />
+              <a href="/get-a-quote" className="inline-flex min-h-14 items-center gap-5  bg-primary px-6 text-sm font-bold text-white shadow-lg  transition hover:-translate-y-0.5 hover:brightness-110">
+                Plan a shipment <FiArrowUpRight size={18} aria-hidden="true" className="ml-3.5" />
               </a>
               <a href="#services" className="inline-flex min-h-14 items-center gap-3 border border-primary/20 px-5 text-sm font-bold text-dark transition hover:bg-black/5">
                 Explore our services <FiArrowDown size={16} aria-hidden="true" />
