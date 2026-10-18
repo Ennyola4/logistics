@@ -1,4 +1,3 @@
-import { BsFillChatQuoteFill } from "react-icons/bs"
 import { animate, motion, useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import Tracker from "../components/Tracker"
@@ -13,6 +12,7 @@ import {
   FiShield,
   FiTruck,
 } from "react-icons/fi"
+import GetAQuoteButton from "../components/GetAQuoteButton"
 
 const SERVICES = [
   {
@@ -66,8 +66,8 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-light/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-primary">
-              <span className="h-2 w-2 rounded-full bg-primary" />
+            <div className="mb-7 inline-flex items-center gap-2 border border-primary/15 shadow-sm bg-light/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-primary">
+              <span className="h-2 w-2 bg-primary" />
               Logistics without limits
             </div>
             <h1 className="max-w-[680px] text-4xl font-bold uppercase leading-[0.88] tracking-[-0.035em] text-dark sm:text-5xl lg:text-[6.5rem]">
@@ -77,10 +77,10 @@ const Home = () => {
               From first mile to final destination, we make shipping simpler, supply chains smarter, and opportunity easier to reach.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <a href="/get-a-quote" className="inline-flex min-h-14 items-center gap-5 rounded-full bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:brightness-110">
+              <a href="/get-a-quote" className="inline-flex min-h-14 items-center gap-5  bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:brightness-110">
                 Plan a shipment <FiArrowUpRight size={18} aria-hidden="true" />
               </a>
-              <a href="#services" className="inline-flex min-h-14 items-center gap-3 rounded-full px-5 text-sm font-bold text-dark transition hover:bg-black/5">
+              <a href="#services" className="inline-flex min-h-14 items-center gap-3 border border-primary/20 px-5 text-sm font-bold text-dark transition hover:bg-black/5">
                 Explore our services <FiArrowDown size={16} aria-hidden="true" />
               </a>
             </div>
@@ -186,7 +186,7 @@ const Home = () => {
             {SERVICES.map(({ number, title, description, icon: Icon }, index) => (
               <motion.article
                 key={number}
-                className="group rounded-[1.5rem] border border-black/8 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl hover:shadow-dark/5 sm:p-8"
+                className="group  border border-black/15 shadow-xs bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl hover:shadow-dark/5 sm:p-8"
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -194,7 +194,7 @@ const Home = () => {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-extrabold tracking-[0.16em] text-primary">/{number}</span>
-                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-light text-primary transition-colors group-hover:bg-primary group-hover:text-white"><Icon size={22} aria-hidden="true" /></span>
+                  <span className="grid h-12 w-12 place-items-center shadow-sm bg-light text-primary transition-colors group-hover:bg-primary group-hover:text-white"><Icon size={22} aria-hidden="true" /></span>
                 </div>
                 <h3 className="mt-9 text-xl font-extrabold text-dark">{title}</h3>
                 <p className="mt-3 min-h-[72px] text-sm leading-6 text-secondary/70">{description}</p>
@@ -204,22 +204,20 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="px-5 pb-16 sm:px-8 sm:pb-20 lg:px-16">
+        <section className="w-full pb-16 sm:pb-20">
           <motion.div
-            className="mx-auto flex max-w-[1450px] flex-col justify-between gap-8 overflow-hidden rounded-[2rem] bg-light p-7 sm:p-10 md:flex-row md:items-center md:p-14"
+            className="flex w-full flex-col justify-evenly gap-8 overflow-visible bg-light p-7 shadow-sm sm:p-10 md:flex-row md:items-center md:p-14"
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="max-w-2xl">
+            <div className="">
               <div className="mb-4 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.18em] text-primary"><FiShield aria-hidden="true" /> A partner you can count on</div>
               <h2 className="font-heading text-4xl font-bold uppercase leading-[0.95] text-dark sm:text-5xl">Let&apos;s get your next delivery moving.</h2>
               <p className="mt-4 max-w-xl text-sm leading-6 text-secondary/75 sm:text-base">Tell us where it needs to go. We&apos;ll help you find the smarter way to get it there.</p>
             </div>
-            <a href="/get-a-quote" className="inline-flex min-h-14 shrink-0 items-center justify-center gap-4 rounded-2xl bg-primary px-6 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:brightness-110">
-              Get a quote <BsFillChatQuoteFill size={18} aria-hidden="true" />
-            </a>
+           <GetAQuoteButton/>
           </motion.div>
         </section>
       </main>

@@ -35,7 +35,7 @@ const Tracker = () => {
 								Tracking number <span className="ml-1 font-semibold normal-case tracking-normal text-secondary/45">(available soon)</span>
 							</label>
 							<div className="flex flex-col gap-3 min-[440px]:flex-row">
-								<div className="flex min-h-14 min-w-0 flex-1 items-center gap-3 rounded-2xl border border-black/10 bg-white/70 px-4 opacity-70">
+								<div className="flex min-h-14 min-w-0 flex-1 items-center gap-3  border border-black/10 bg-white/70 px-4 opacity-70">
 									<FiPackage className="shrink-0 text-primary" size={19} aria-hidden="true" />
 									<input
 										id="tracking-number"
@@ -48,7 +48,7 @@ const Tracker = () => {
 								<button
 									type="button"
 									disabled
-									className="inline-flex min-h-14 cursor-not-allowed items-center justify-center gap-3 rounded-2xl bg-primary/70 px-6 text-sm font-bold text-white/90"
+									className="inline-flex min-h-14 cursor-not-allowed items-center justify-center gap-3  bg-primary/70 px-6 text-sm font-bold text-white/90"
 								>
 									Coming soon <FiClock size={17} aria-hidden="true" />
 								</button>

@@ -48,8 +48,8 @@ const Navbar: FC = () => {
       <div
         className={`mx-auto overflow-hidden border border-black/5 shadow-xs transition-all duration-300 ${
           isScrolled
-            ? "w-full max-w-none rounded-none border-x-0 border-t-0"
-            : "max-w-[1710px] rounded-[1.75rem]"
+            ? "w-full max-w-none  border-x-0 border-t-0"
+            : "max-w-[1710px] "
         }`}
       >
         {/* Announcement bar */}
@@ -102,7 +102,7 @@ const Navbar: FC = () => {
               }`}
             />
 
-            <span className="hidden border-l border-black/10 pl-3 text-[10px] font-extrabold leading-tight tracking-[0.14em] text-primary sm:block lg:text-[11px] lg:tracking-[0.18em]">
+            <span className=" border-l border-black/10 pl-3 text-[10px] font-extrabold leading-tight tracking-[0.14em] text-primary sm:block lg:text-[11px] lg:tracking-[0.18em]">
               Moving
               <br />
               Africa forward
@@ -125,13 +125,7 @@ const Navbar: FC = () => {
 
           {/* Desktop CTA and mobile menu button */}
           <div className="ml-auto flex shrink-0 items-center gap-2 lg:ml-3">
-            <a
-              href="/get-a-quote"
-              className="hidden h-10 items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-primary px-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:brightness-110 lg:inline-flex xl:px-5"
-            >
-              Get a Quote
-              <BsFillChatQuoteFill aria-hidden="true" />
-            </a>
+          
 
             <button
               type="button"
