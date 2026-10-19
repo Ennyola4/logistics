@@ -16,12 +16,12 @@ const MILESTONES = [
 
 const Tracker = () => {
 	return (
-		<section id="track" className="overflow-hidden bg-[#f7f7f6] px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28">
+		<section id="track" className="overflow-hidden bg-gray-100 px-5 py-20 sm:px-8 sm:py-24 lg:px-16 lg:py-28">
 			<div className="mx-auto max-w-[1450px]">
 				<div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
 					<div>
-						<p className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-light px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-primary">
-							<span className="h-2 w-2 rounded-full bg-primary" /> Coming soon
+						<p className="inline-flex items-center gap-2 rounded-md border border-primary/15 bg-primary px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-white">
+							<span className="h-2 w-2 rounded-full bg-white" /> Coming soon
 						</p>
 						<h2 className="mt-5 max-w-xl font-heading text-4xl font-bold uppercase leading-[0.95] text-dark sm:text-6xl">
 							Track every mile.<br />Coming soon.
@@ -59,21 +59,21 @@ const Tracker = () => {
 
 					<div className="relative">
 						<div className="absolute -right-12 -top-12 h-44 w-44 rounded-full bg-primary/5 blur-3xl" aria-hidden="true" />
-						<div className="relative rounded-[1.75rem] border border-black/5 bg-white p-5 shadow-[0_24px_70px_-35px_rgba(32,32,32,0.3)] sm:p-8">
+						<div className="relative  border border-black/5 bg-white p-5 shadow-md sm:p-8">
 							<div className="flex flex-wrap items-start justify-between gap-4 border-b border-black/8 pb-6">
 								<div className="flex items-center gap-3">
-									<span className="grid h-12 w-12 place-items-center rounded-2xl bg-light text-primary"><FiTruck size={22} aria-hidden="true" /></span>
+									<span className="grid h-12 w-12 place-items-center shadow-xs rounded-md bg-light text-primary"><FiTruck size={22} aria-hidden="true" /></span>
 									<div>
 										<p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-secondary/50">Tracking preview</p>
 										<p className="mt-1 text-sm font-extrabold tracking-wide text-dark">Sample shipment</p>
 									</div>
 								</div>
-								<span className="inline-flex items-center gap-2 rounded-full bg-[#faf1df] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#87621d]">
+								<span className="inline-flex items-center gap-2 rounded-md bg-[#faf1df] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#87621d]">
 									<span className="h-1.5 w-1.5 rounded-full bg-[#d5a744]" /> Preview only
 								</span>
 							</div>
 
-							<div className="grid grid-cols-2 gap-4 border-b border-black/8 py-5 sm:gap-6">
+							<div className="grid grid-cols-2 gap-4  py-5 sm:gap-6">
 								<div>
 									<p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-secondary/45">From</p>
 									<p className="mt-2 flex items-center gap-2 text-sm font-bold text-dark"><FiMapPin className="shrink-0 text-primary" size={15} aria-hidden="true" /> Nairobi, KE</p>
@@ -84,9 +84,9 @@ const Tracker = () => {
 								</div>
 							</div>
 
-							<div className="flex items-center justify-between gap-3 rounded-2xl bg-[#faf7f4] px-4 py-4 sm:px-5">
+							<div className="flex items-center justify-between gap-3 rounded-md bg-light px-4 py-4 sm:px-5">
 								<div className="flex items-center gap-3">
-									<span className="grid h-10 w-10 place-items-center rounded-xl bg-white text-primary shadow-sm"><FiClock size={18} aria-hidden="true" /></span>
+									<span className="grid h-10 w-10 place-items-center rounded-md bg-white text-primary shadow-sm"><FiClock size={18} aria-hidden="true" /></span>
 									<div><p className="text-[10px] font-extrabold uppercase tracking-[0.13em] text-secondary/50">Estimated delivery</p><p className="mt-1 text-sm font-extrabold text-dark">Friday, October 17</p></div>
 								</div>
 								<FiArrowRight className="shrink-0 text-primary" size={18} aria-hidden="true" />

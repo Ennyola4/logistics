@@ -1,6 +1,7 @@
 
 import { useEffect, useState, type FC } from "react"
 import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi"
+import { RiMenuUnfold2Line } from "react-icons/ri"
 
 interface NavLink {
   label: string
@@ -92,7 +93,7 @@ const Navbar: FC = () => {
             className="flex min-w-0 shrink-0 items-center"
           >
             <img
-              src="/truck.png"
+              src="/logisticsLogo1.png"
               alt="Company logo"
               className={`block w-auto object-contain transition-all duration-300 ${
                 isScrolled
@@ -100,12 +101,6 @@ const Navbar: FC = () => {
                   : "h-9 max-w-[clamp(5rem,24vw,10rem)] sm:h-12 lg:h-14"
               }`}
             />
-
-            <span className=" border-l border-black/10 pl-3 text-[10px] font-extrabold leading-tight tracking-[0.14em] text-primary sm:block lg:text-[11px] lg:tracking-[0.18em]">
-              Moving
-              <br />
-              Africa forward
-            </span>
           </a>
 
           {/* Desktop navigation */}
@@ -141,7 +136,7 @@ const Navbar: FC = () => {
               {mobileMenuOpen ? (
                 <FiX size={22} aria-hidden="true" />
               ) : (
-                <FiMenu size={22} aria-hidden="true" />
+                <RiMenuUnfold2Line size={22} aria-hidden="true" />
               )}
             </button>
           </div>

@@ -31,7 +31,7 @@ const Footer = () => (
       <div className="grid gap-12 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.9fr_1fr] lg:gap-10 lg:pb-16">
         <div className="max-w-sm">
           <a href="/" aria-label="Logistics home" className="inline-flex items-center gap-3">
-            <img src="/truck2.jpg" alt="" className="h-12 w-auto object-contain" />
+            <img src="/logisticsLogo1.png" alt="" className="h-12 w-auto object-contain" />
             <span className="border-l border-white/20 pl-3 text-[10px] font-extrabold uppercase leading-tight tracking-[0.16em] text-white/90">
               Moving Africa<br />forward
             </span>
