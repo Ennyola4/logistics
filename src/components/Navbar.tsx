@@ -1,6 +1,6 @@
 
 import { useEffect, useState, type FC } from "react"
-import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi"
+import { FiArrowUpRight, FiX } from "react-icons/fi"
 import { RiMenuUnfold2Line } from "react-icons/ri"
 
 interface NavLink {
