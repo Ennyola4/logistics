@@ -88,7 +88,7 @@ const Faq = () => {
   }, [activeCategory, searchQuery])
 
   return (
-    <main>
+    <main className="overflow-x-clip">
       <section className="relative isolate overflow-hidden bg-dark text-white">
         <div
           className="absolute inset-0 -z-20 bg-cover bg-center"
@@ -97,12 +97,12 @@ const Faq = () => {
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-dark via-dark/85 to-dark/45" aria-hidden="true" />
         <div className="absolute -right-24 top-12 -z-10 h-80 w-80 rounded-full bg-primary/25 blur-3xl" aria-hidden="true" />
-        <div className="mx-auto grid min-h-[440px] max-w-[1450px] items-center gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1fr_0.7fr] lg:px-16 lg:py-24">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
+        <div className="mx-auto grid min-h-[400px] max-w-[1450px] items-center gap-8 px-4 py-14 min-[375px]:px-5 sm:min-h-[440px] sm:gap-10 sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] lg:px-16 lg:py-24">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="min-w-0 max-w-3xl">
             <p className="inline-flex items-center gap-2 border border-white/20 bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-white/90 backdrop-blur-sm">
               <span className="h-2 w-2 bg-primary" /> Help, made clearer
             </p>
-            <h1 className="mt-7 text-5xl font-bold uppercase leading-[0.88] tracking-[-0.035em] sm:text-7xl lg:text-[6.25rem]">
+            <h1 className="mt-7 break-words text-[clamp(2.5rem,11vw,4.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.035em] sm:text-7xl lg:text-[6.25rem]">
               Good questions.<br /><span className="text-primary">Clear answers.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
@@ -124,9 +124,9 @@ const Faq = () => {
         </div>
       </section>
 
-      <section id="faq-list" className="mx-auto max-w-[1450px] scroll-mt-28 px-5 py-16 sm:px-8 sm:py-20 lg:px-16 lg:py-24">
-        <div className="grid items-start gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
-          <div>
+      <section id="faq-list" className="mx-auto max-w-[1450px] scroll-mt-28 px-4 py-14 min-[375px]:px-5 sm:px-8 sm:py-20 lg:px-16 lg:py-24">
+        <div className="grid min-w-0 items-start gap-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-16">
+          <div className="min-w-0">
             <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-primary">Frequently asked questions</p>
             <h2 className="mt-4 font-heading text-4xl font-bold uppercase leading-[0.95] text-dark sm:text-5xl">The details that help.</h2>
             <p className="mt-5 max-w-md text-sm leading-7 text-secondary/75 sm:text-base">Search for a topic or choose a category to find answers relevant to your shipment.</p>
@@ -137,7 +137,7 @@ const Faq = () => {
               <input value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} type="search" placeholder="Search questions" className="w-full bg-transparent text-sm text-dark outline-none placeholder:text-secondary/50" />
             </label>
 
-            <div className="mt-5 flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible">
+            <div className="mt-5 flex max-w-full gap-2 overflow-x-auto overscroll-x-contain pb-2 lg:flex-col lg:overflow-visible">
               {FAQ_CATEGORIES.map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
@@ -152,7 +152,7 @@ const Faq = () => {
             </div>
           </div>
 
-          <div aria-live="polite" className="space-y-3">
+          <div aria-live="polite" className="min-w-0 space-y-3">
             {filteredQuestions.length ? filteredQuestions.map(({ question, answer }, index) => {
               const isOpen = openQuestion === question
               return (
@@ -161,18 +161,18 @@ const Faq = () => {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: Math.min(index * 0.035, 0.2) }}
-                  className={`border bg-white transition-colors ${isOpen ? "border-primary/35 shadow-sm" : "border-black/10 hover:border-black/20"}`}
+                  className={`min-w-0 border bg-white transition-colors ${isOpen ? "border-primary/35 shadow-sm" : "border-black/10 hover:border-black/20"}`}
                 >
                   <h3>
                     <button
                       type="button"
                       aria-expanded={isOpen}
                       onClick={() => setOpenQuestion(isOpen ? null : question)}
-                      className="flex min-h-[70px] w-full items-center justify-between gap-4 px-5 py-4 text-left sm:px-6"
+                      className="flex min-h-[70px] w-full min-w-0 items-center justify-between gap-3 px-4 py-4 text-left min-[375px]:gap-4 min-[375px]:px-5 sm:px-6"
                     >
-                      <span className="flex items-start gap-4">
-                        <span className="pt-0.5 text-[10px] font-extrabold tracking-[0.12em] text-primary">{String(index + 1).padStart(2, "0")}</span>
-                        <span className="text-sm font-extrabold leading-6 text-dark sm:text-base">{question}</span>
+                      <span className="flex min-w-0 flex-1 items-start gap-3 min-[375px]:gap-4">
+                        <span className="shrink-0 pt-0.5 text-[10px] font-extrabold tracking-[0.12em] text-primary">{String(index + 1).padStart(2, "0")}</span>
+                        <span className="min-w-0 break-words text-sm font-extrabold leading-6 text-dark sm:text-base">{question}</span>
                       </span>
                       <span className={`grid h-9 w-9 shrink-0 place-items-center border transition-all ${isOpen ? "rotate-180 border-primary bg-primary text-white" : "border-black/10 text-secondary"}`}>
                         <FiChevronDown size={17} aria-hidden="true" />
@@ -188,7 +188,7 @@ const Faq = () => {
                         transition={{ duration: 0.24, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="ml-9 border-t border-black/10 px-5 py-5 text-sm leading-7 text-secondary/80 sm:ml-10 sm:px-6">{answer}</p>
+                        <p className="ml-8 border-t border-black/10 px-4 py-5 text-sm leading-7 text-secondary/80 min-[375px]:ml-9 min-[375px]:px-5 sm:ml-10 sm:px-6">{answer}</p>
                       </motion.div>
                     )}
                   </AnimatePresence>
