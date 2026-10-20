@@ -9,6 +9,7 @@ import {
   FiMapPin,
   FiPhone,
 } from "react-icons/fi"
+import { Link } from "react-router-dom"
 
 const FOOTER_LINKS = {
   Explore: [
@@ -30,12 +31,12 @@ const Footer = () => (
     <div className="mx-auto max-w-[1450px] px-5 pb-8 pt-14 sm:px-8 sm:pt-20 lg:px-16">
       <div className="grid gap-12 border-b border-white/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.9fr_1fr] lg:gap-10 lg:pb-16">
         <div className="max-w-sm">
-          <a href="/" aria-label="Logistics home" className="inline-flex items-center gap-3">
+          <Link to="/" aria-label="Logistics home" className="inline-flex items-center gap-3">
             <img src="/logisticsLogo1.png" alt="" className="h-12 w-auto object-contain" />
             <span className="border-l border-white/20 pl-3 text-[10px] font-extrabold uppercase leading-tight tracking-[0.16em] text-white/90">
               Moving Africa<br />forward
             </span>
-          </a>
+          </Link>
           <p className="mt-6 text-sm leading-7 text-white/60">
             Connecting businesses and communities with dependable logistics, from the first mile to the final destination.
           </p>
@@ -65,10 +66,10 @@ const Footer = () => (
             <ul className="mt-5 space-y-3">
               {links.map(({ label, href }) => (
                 <li key={label}>
-                  <a href={href} className="group inline-flex items-center gap-1 text-sm text-white/60 transition-colors hover:text-white">
+                  <Link to={href} className="group inline-flex items-center gap-1 text-sm text-white/60 transition-colors hover:text-white">
                     {label}
                     <FiArrowUpRight className="opacity-0 transition-opacity group-hover:opacity-100" size={13} aria-hidden="true" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -79,22 +80,22 @@ const Footer = () => (
           <h2 className="text-xs font-extrabold uppercase tracking-[0.18em] text-white">Get in touch</h2>
           <ul className="mt-5 space-y-4">
             <li>
-              <a href="/contact" className="flex items-start gap-3 text-sm leading-6 text-white/60 transition-colors hover:text-white">
+              <Link to="/contact" className="flex items-start gap-3 text-sm leading-6 text-white/60 transition-colors hover:text-white">
                 <FiMapPin className="mt-1 shrink-0 text-primary" size={16} aria-hidden="true" />
                 Talk to our team about your delivery needs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white">
+              <Link to="/contact" className="flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white">
                 <FiMail className="shrink-0 text-primary" size={16} aria-hidden="true" />
                 Send us a message
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white">
+              <Link to="/contact" className="flex items-center gap-3 text-sm text-white/60 transition-colors hover:text-white">
                 <FiPhone className="shrink-0 text-primary" size={16} aria-hidden="true" />
                 Request a call back
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -103,8 +104,8 @@ const Footer = () => (
       <div className="flex flex-col gap-5 pt-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} Logistics. All rights reserved.</p>
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-          <a href="/privacy" className="transition-colors hover:text-white">Privacy</a>
-          <a href="/terms" className="transition-colors hover:text-white">Terms</a>
+          <Link to="/privacy" className="transition-colors hover:text-white">Privacy</Link>
+          <Link to="/terms" className="transition-colors hover:text-white">Terms</Link>
           <a href="#top" className="inline-flex items-center gap-2 font-semibold text-white/70 transition-colors hover:text-white">
             Back to top <FiArrowUp size={14} aria-hidden="true" />
           </a>

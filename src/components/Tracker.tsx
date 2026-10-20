@@ -68,8 +68,8 @@ const Tracker = () => {
 										<p className="mt-1 text-sm font-extrabold tracking-wide text-dark">Sample shipment</p>
 									</div>
 								</div>
-								<span className="inline-flex items-center gap-2 rounded-md bg-[#faf1df] px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#87621d]">
-									<span className="h-1.5 w-1.5 rounded-full bg-[#d5a744]" /> Preview only
+								<span className="inline-flex items-center gap-2 rounded-md bg-light px-3 py-2 text-[10px] font-extrabold uppercase tracking-[0.12em] text-secondary shadow-sm">
+									<span className="h-1.5 w-1.5 rounded-full bg-secondary" /> Preview only
 								</span>
 							</div>
 
