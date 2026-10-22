@@ -77,7 +77,7 @@ const AboutUs = () => (
           <p className="inline-flex items-center gap-2 border border-white/20 bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-white/90 backdrop-blur-sm">
             <span className="h-2 w-2 bg-primary" /> About our company
           </p>
-          <h1 className="mt-7 text-5xl font-bold uppercase leading-[0.88] tracking-[-0.035em] sm:text-7xl lg:text-[6.5rem]">
+          <h1 className="mt-7 text-5xl font-bold uppercase leading-[0.88] tracking-[-0.035em] sm:text-5xl lg:text-[4.5rem]">
             We move goods.<br />
             <span className="text-primary">We move possibility.</span>
           </h1>

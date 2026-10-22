@@ -43,11 +43,7 @@ const Navbar: FC = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full backdrop-blur-xs transition-all duration-300 ${
-        isScrolled
-          ? "px-0 pb-0 pt-0"
-          : "px-3 pb-2 pt-3 sm:px-6  lg:px-8"
-      }`}
+      className={`sticky top-0 z-50 w-full backdrop-blur-xs transition-all duration-300`}
     >
       <div
         className={`mx-auto overflow-hidden  transition-all duration-300 ${
@@ -59,7 +55,7 @@ const Navbar: FC = () => {
         {/* Announcement bar */}
         <div
           role="region"
-          aria-label="Moving the world forward with global reach"
+          aria-label=""
           className={`overflow-hidden bg-dark text-white transition-all duration-300 ${
             isScrolled
               ? "max-h-0 min-h-0 py-0 opacity-0"

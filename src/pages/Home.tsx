@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <>
       <main id="top">
-        <section className="relative mx-auto grid min-h-[620px] max-w-[1710px] items-center gap-10 overflow-hidden px-5 pb-16 pt-10 sm:px-8 md:min-h-[680px] md:grid-cols-[0.9fr_1.1fr] md:px-12 md:py-16 lg:px-20 lg:py-20">
+        <section className="relative mx-auto grid min-h-[620px] max-w-[1710px] items-center gap-10 overflow-hidden px-5 pb-16 sm:px-8 md:min-h-[680px] md:grid-cols-[0.9fr_1.1fr] md:px-12 md:py-16 lg:px-20 lg:py-20">
           <div className="pointer-events-none absolute -left-32 top-16 h-80 w-80 rounded-full bg-light blur-3xl" />
           <motion.div
             className="relative z-10 max-w-2xl"
@@ -57,11 +57,11 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <div className="mb-7 inline-flex items-center gap-2 border border-primary/15 shadow-sm bg-light/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-primary">
+            <div className="mb-2 inline-flex items-center gap-2 border border-primary/15 shadow-sm bg-light/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-primary">
               <span className="h-2 w-2 bg-primary" />
               Logistics without limits
             </div>
-            <h1 className="max-w-[680px] text-4xl font-bold uppercase leading-[0.88] tracking-[-0.035em] text-dark sm:text-5xl lg:text-[6.5rem]">
+            <h1 className="max-w-[680px] text-4xl font-bold uppercase leading-[0.88] tracking-[-0.035em] text-dark sm:text-5xl lg:text-[4.0rem]">
               We move <span className="text-primary">Africa</span> forward.
             </h1>
             <p className="mt-7 max-w-lg text-base leading-7 text-secondary/75 sm:text-lg sm:leading-8">

@@ -102,7 +102,7 @@ const Faq = () => {
             <p className="inline-flex items-center gap-2 border border-white/20 bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-white/90 backdrop-blur-sm">
               <span className="h-2 w-2 bg-primary" /> Help, made clearer
             </p>
-            <h1 className="mt-7 break-words text-[clamp(2.5rem,11vw,4.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.035em] sm:text-7xl lg:text-[6.25rem]">
+            <h1 className="mt-7 break-words text-[clamp(2.5rem,11vw,4.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.035em] sm:text-5xl lg:text-[4.25rem]">
               Good questions.<br /><span className="text-primary">Clear answers.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
