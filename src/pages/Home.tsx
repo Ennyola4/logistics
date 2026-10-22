@@ -57,7 +57,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <div className="mb-2 inline-flex items-center gap-2 border border-primary/15 shadow-sm bg-light/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-primary">
+            <div className="mb-2 mt-8 inline-flex items-center gap-2 border border-primary/15 shadow-sm bg-light/70 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em] text-primary">
               <span className="h-2 w-2 bg-primary" />
               Logistics without limits
             </div>
